@@ -7,7 +7,7 @@ const bootstrap = async () => {
         const meta = JSON.parse(fs.readFileSync(`./${i.toString()}/${i}.json`, 'utf8'));
         if (meta.attributes.length === 0) continue;
         if (meta.used) continue;
-        if (meta.attributes[0]['value'].includes('Prime')) continue;
+        // if (meta.attributes[0]['value'].includes('Prime')) continue;
         if (meta.attributes[0]['value'].includes('Impossible')) continue;
 
         meta.used = true;
